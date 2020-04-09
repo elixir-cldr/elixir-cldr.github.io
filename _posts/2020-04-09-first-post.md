@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stay tunes
+title: Stay tuned
 image: /img/hello_world.jpeg
 ---
 

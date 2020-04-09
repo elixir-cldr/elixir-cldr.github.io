@@ -1,7 +1,8 @@
 ---
 layout: post
-title: First post!
+title: Stay tunes
 image: /img/hello_world.jpeg
 ---
 
-This is my first post, how exciting!
+Stay tuned for adventures in internationalization and localization
+

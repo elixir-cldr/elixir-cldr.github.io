@@ -2,6 +2,10 @@
 
 Essays on internationalization and localization with implementation strategies for Elixir programmers.
 
+### Contributing
+
+Pull requests and issues are welcome.
+
 ### Credits
 
 Forked from [Beautiful Jekyll](https://github.com/daattali/beautiful-jekyll) which is *Copyright 2019 [Dean Attali](https://deanattali.com)*

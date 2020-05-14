@@ -8,7 +8,7 @@ layout: null
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #404040;
   position: relative;
   background-color: {{ site.page-col }};
@@ -346,7 +346,7 @@ footer .theme-by {
 .post-preview .post-meta,
 .post-heading .post-meta {
   color: #808080;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   margin: 0 0 10px;
 }
@@ -381,7 +381,7 @@ footer .theme-by {
 
 @media only screen and (min-width: 768px) {
   .post-preview .post-title {
-    font-size: 36px;
+    font-size: 22px;
   }
 }
 
@@ -513,7 +513,7 @@ footer .theme-by {
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
-    margin-top: 130px;
+    margin-top: 150px;
   }
   .intro-header.big-img {
     margin-top: 91px; /* Full navbar is small navbar + 20px padding on each side when expanded */
@@ -523,7 +523,7 @@ footer .theme-by {
     padding: 150px 0;
   }
   .intro-header .page-heading h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
   .intro-header .post-heading h1 {
     font-size: 20px;

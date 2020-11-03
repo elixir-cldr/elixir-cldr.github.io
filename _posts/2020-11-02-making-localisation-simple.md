@@ -53,7 +53,7 @@ iex> Cldr.to_string DateTime.utc_now
 
 ### Units of Measure
 
-This is probably my favourite. From [CLDR 37](http://cldr.unicode.org/index/downloads/cldr-37) and [ex_cldr 2.14](https://hex.pm/packages/ex_cldr/2.14.0) there is a good data to support units of measure, unit conversion and localed unit preferences.
+This is probably my favourite. From [CLDR 37](http://cldr.unicode.org/index/downloads/cldr-37) and [ex_cldr 2.14](https://hex.pm/packages/ex_cldr/2.14.0) there is a good data to support units of measure, unit conversion and localised unit preferences.
 
 ```elixir
 iex> Cldr.to_string Cldr.Unit.new!(3, :foot)
@@ -87,9 +87,8 @@ iex> Cldr.to_string Cldr.Unit.new!(2, :meter, usage: :person_height)
 # Of course units can be localised
 # This example converts meters to feet and inches which is the
 # preference for "en-US"
-iex> Cldr.Unit.localize height, locale: "en-US"
-[#Cldr.Unit<:foot, 6>,
- #Cldr.Unit<:inch, 37008780297879768 <|> 5490788665690109>]
+iex> height = Cldr.Unit.new!(2, :meter, usage: :person_height)
+#Cldr.Unit<:meter, 2, usage: :person_height, format_options: []>
 iex> localised_height = Cldr.Unit.localize height, locale: "en-US"
 [#Cldr.Unit<:foot, 6>,
  #Cldr.Unit<:inch, 37008780297879768 <|> 5490788665690109>]

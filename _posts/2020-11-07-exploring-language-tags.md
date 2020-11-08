@@ -18,7 +18,7 @@ For CLDR, [Unicode Technical Report 35 (TR35)](http://unicode.org/reports/tr35/#
 
 Given that one of the most defining characteristic of any culture is its language it should not surprising that the simplest language tag consists of just a language identifier.
 
-Typically, the language idenfifier is the corresponding [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code for the given language. The following are well known examples:
+Typically, the language identifier is the corresponding [ISO639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) code for the given language. The following are well known examples:
 
 * "en" for english
 * "fr" for french

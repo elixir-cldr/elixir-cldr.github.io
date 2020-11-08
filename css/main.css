@@ -385,6 +385,11 @@ footer .theme-by {
   }
 }
 
+/* Post */
+.blog-post h3 {
+  font-size: 18px;
+}
+
 /* --- Tags --- */
 
 .blog-tags {

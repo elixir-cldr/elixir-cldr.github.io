@@ -21,19 +21,19 @@ It may suprise you to learn that from this simple language tag we also know a lo
 
 Certain localisation functions are dependent on understanding with which territory a user affiliates themselves. One example is units of measurement where the US tends to use units derived from the [Imperial System of Measurement](https://en.wikipedia.org/wiki/Imperial_units) whereas most of the world uses the [Metric system](https://en.wikipedia.org/wiki/Metric_system). Therefore it is helpful to know the users territory in order to present units of measure in an appropriate manner.
 
-In [ex_cldr](https://hex.pm/packages/ex_cldr) we can identify the users territory with `Cldr.Locale.territory_from_locale/2`.  For example (using the same function directly on a [backend](https://hexdocs.pm/ex_cldr/readme.html#backend-module-configuration) module):
+In [ex_cldr](https://hex.pm/packages/ex_cldr) we can identify the user's territory with `Cldr.Locale.territory_from_locale/1`.  For example:
 
 ```elixir
-iex> MyApp.Cldr.Locale.territory_from_locale "en"
+iex> Cldr.Locale.territory_from_locale "en"
 :US
 
-iex> MyApp.Cldr.Locale.territory_from_locale "en-AU"
+iex> Cldr.Locale.territory_from_locale "en-AU"
 :AU
 
-iex> MyApp.Cldr.Locale.territory_from_locale "en-GB"
+iex> Cldr.Locale.territory_from_locale "en-GB"
 :GB
 
-iex> MyApp.Cldr.Locale.territory_from_locale "ja"
+iex> Cldr.Locale.territory_from_locale "ja"
 :JP
 ```
 
@@ -54,7 +54,8 @@ iex> MyApp.Cldr.Locale.territory_from_locale "en-u-rg-auzzzz"
 iex> MyApp.Cldr.Locale.territory_from_locale "ja-u-rg-uszzzz"
 :US
 ```
-The syntax is unusual in order to comply with the overall specification of language tag however it is straight forward to understand when recognising that the `zzzz` is padding to create a 6-character region override code.
+
+The syntax is unusual in order to comply with the overall specification of language tags however it is straight forward to understand when recognising that the `zzzz` is padding to create a 6-character region override code.
 
 Why is overriding the territory (region) preference useful? In `CLDR`, the `region override (rg)` is used to [overide the territory to be used](https://unicode.org/reports/tr35/tr35-info.html#rgScope) when:
 
@@ -252,6 +253,10 @@ iex> Cldr.Number.to_string 123456, locale: "th"
 
 iex> Cldr.Number.to_string 123456, locale: "th-u-nu-thai"
 {:ok, "๑๒๓,๔๕๖"}
+
+# In the "ar" locale the number system is always :arab
+iex> Cldr.Number.to_string 123456, locale: "ar"
+{:ok, "١٢٣٬٤٥٦"}
 ```
 
 ### In Summary

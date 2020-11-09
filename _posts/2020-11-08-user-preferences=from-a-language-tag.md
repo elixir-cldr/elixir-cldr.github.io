@@ -48,10 +48,10 @@ As a result of this policy, there is no `pt-BR` or `en-US` locale data defined i
 In some cases it is desirable to override the territory to be used for some kinds of localisation and in this case the [regional override](https://unicode.org/reports/tr35/#RegionOverride) can be specified as part of the [BCP 47 `U`](https://unicode.org/reports/tr35/#u_Extension) of a language tag.  We will explore the `U` extension in a later post but for now we can show some examples of its use:
 
 ```elixir
-iex> MyApp.Cldr.Locale.territory_from_locale "en-u-rg-auzzzz"
+iex> Cldr.Locale.territory_from_locale "en-u-rg-auzzzz"
 :AU
 
-iex> MyApp.Cldr.Locale.territory_from_locale "ja-u-rg-uszzzz"
+iex> Cldr.Locale.territory_from_locale "ja-u-rg-uszzzz"
 :US
 ```
 
